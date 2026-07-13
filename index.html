@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bolos do Daniel - Loja</title>
+    
+    
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;600;700;900&display=swap" rel="stylesheet">
+    
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+    
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+
+<div class="nav-wrapper">
+    <div class="container">
+        <div class="nav">
+            <a href="#" class="logo">
+                <i class="fas fa-cake"></i> Bolos <span style="color: #cf13a6;">Daniel</span>
+            </a>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#" class="active" data-tab="bolos"><i class="fas fa-cake"></i> Bolos</a></li>
+                <li><a href="#" data-tab="salgados"><i class="fas fa-utensils"></i> Salgados</a></li>
+                <li>
+                    <button class="btn btn-hover admin-toggle" id="adminToggleBtn">
+                        <i class="fas fa-user-cog"></i> <span>Admin</span>
+                    </button>
+                </li>
+                <li>
+                    <button class="btn btn-hover cart-icon" id="cartOpenBtn">
+                        <i class="fas fa-shopping-bag"></i> <span>Carrinho <span class="cart-count" id="cartCount">0</span></span>
+                    </button>
+                </li>
+            </ul>
+            <div class="hamburger-menu" id="hamburgerMenu">
+                <div class="hamburger"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<section class="hero-slide">
+    <div class="container">
+        <div class="hero-slide-wrapper">
+            <div class="owl-carousel hero-carousel owl-theme" id="heroCarousel">
+                <!-- Slide 1 -->
+                <div class="hero-slide-item">
+                    <img src="img/amarelochoco.jpg" alt="Bolo de Chocolate" onerror="this.src='https://via.placeholder.com/1920x800/221f1f/c0392b?text=Bolo+de+Chocolate'">
+                    <div class="hero-slide-item-content">
+                        <div class="item-content-wraper">
+                            <div class="item-content-title top-down delay-2">Amarelo com chuva de chocolate</div>
+                            <div class="movie-infos top-down delay-4">
+                                <div class="movie-info">
+                                    <i class="fas fa-star"></i>
+                                    <span>Destaque da Semana</span>
+                                </div>
+                                <div class="movie-info">
+                                    <i class="fas fa-tag"></i>
+                                    <span>R$ 42,90</span>
+                                </div>
+                            </div>
+                            <div class="item-content-description top-down delay-6">
+                                Massa fofinha com cobertura cremosa de brigadeiro e granulado. Perfeito para qualquer ocasião!
+                            </div>
+                            <div class="item-action top-down delay-8">
+                                <a href="#" class="btn btn-hover" onclick="addToCartById('b1')">
+                                    <i class="fas fa-shopping-cart"></i> <span>Comprar</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="hero-slide-item">
+                    <img src="img/flamengo.jpg" alt="Bolo do Flamengo" onerror="this.src='https://via.placeholder.com/1920x800/221f1f/c0392b?text=Bolo+do+Flamengo'">
+                    <div class="hero-slide-item-content">
+                        <div class="item-content-wraper">
+                            <div class="item-content-title top-down delay-2">Bolo do Flamengo</div>
+                            <div class="movie-infos top-down delay-4">
+                                <div class="movie-info">
+                                    <i class="fas fa-star"></i>
+                                    <span>Mais Vendido</span>
+                                </div>
+                                <div class="movie-info">
+                                    <i class="fas fa-tag"></i>
+                                    <span>R$ 38,50</span>
+                                </div>
+                            </div>
+                            <div class="item-content-description top-down delay-6">
+                                Cobertura de chocolate derretido, cenoura fresca na massa. Receita tradicional da vovó!
+                            </div>
+                            <div class="item-action top-down delay-8">
+                                <a href="#" class="btn btn-hover" onclick="addToCartById('b2')">
+                                    <i class="fas fa-shopping-cart"></i> <span>Comprar</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="hero-slide-item">
+                    <img src="img/bolofofo.jpg" alt="Bolo Fofo" onerror="this.src='https://via.placeholder.com/1920x800/221f1f/c0392b?text=Bolo+Fofo'">
+                    <div class="hero-slide-item-content">
+                        <div class="item-content-wraper">
+                            <div class="item-content-title top-down delay-2">Bolo Fofo</div>
+                            <div class="movie-infos top-down delay-4">
+                                <div class="movie-info">
+                                    <i class="fas fa-star"></i>
+                                    <span>Recomendado</span>
+                                </div>
+                                <div class="movie-info">
+                                    <i class="fas fa-tag"></i>
+                                    <span>R$ 49,90</span>
+                                </div>
+                            </div>
+                            <div class="item-content-description top-down delay-6">
+                                Morangos frescos, recheio de creme e cobertura de geleia. Uma explosão de sabor!
+                            </div>
+                            <div class="item-action top-down delay-8">
+                                <a href="#" class="btn btn-hover" onclick="addToCartById('b5')">
+                                    <i class="fas fa-shopping-cart"></i> <span>Comprar</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="hero-slide-item">
+                    <img src="img/fazendinha.jpg" alt="Bolo Fazendinha" onerror="this.src='https://via.placeholder.com/1920x800/221f1f/c0392b?text=Bolo+Fazendinha'">
+                    <div class="hero-slide-item-content">
+                        <div class="item-content-wraper">
+                            <div class="item-content-title top-down delay-2">Bolo Fazendinha</div>
+                            <div class="movie-infos top-down delay-4">
+                                <div class="movie-info">
+                                    <i class="fas fa-star"></i>
+                                    <span>Novidade</span>
+                                </div>
+                                <div class="movie-info">
+                                    <i class="fas fa-tag"></i>
+                                    <span>R$ 44,90</span>
+                                </div>
+                            </div>
+                            <div class="item-content-description top-down delay-6">
+                                Coco ralado na massa e cobertura com leite condensado. Pura delícia!
+                            </div>
+                            <div class="item-action top-down delay-8">
+                                <a href="#" class="btn btn-hover" onclick="addToCartById('b4')">
+                                    <i class="fas fa-shopping-cart"></i> <span>Comprar</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<div class="form-overlay" id="formOverlay">
+    <div class="form-box">
+        <h2><i class="fas fa-user"></i> Dados do Cliente</h2>
+        <p>Preencha seus dados para finalizar o pedido.</p>
+        
+        <form id="clienteForm">
+            <div class="form-group">
+                <label for="clienteNome"><i class="fas fa-user"></i> Nome completo</label>
+                <input type="text" id="clienteNome" placeholder="Digite seu nome" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="clienteTelefone"><i class="fas fa-phone"></i> Telefone (WhatsApp)</label>
+                <input type="tel" id="clienteTelefone" placeholder="(79) 99999-9999" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="clienteCpf"><i class="fas fa-id-card"></i> CPF</label>
+                <input type="text" id="clienteCpf" placeholder="123.456.789-00" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="clienteEndereco"><i class="fas fa-map-marker-alt"></i> Endereço completo</label>
+                <textarea id="clienteEndereco" rows="2" placeholder="Rua, número, bairro, cidade - CEP" required></textarea>
+            </div>
+            
+            <div class="form-group">
+                <label for="clienteObservacao"><i class="fas fa-pen"></i> Observações (opcional)</label>
+                <textarea id="clienteObservacao" rows="2" placeholder="Alguma observação sobre o pedido?"></textarea>
+            </div>
+            
+            <div class="form-actions">
+                <button type="button" class="btn-cancel" id="cancelFormBtn"><i class="fas fa-times"></i> Cancelar</button>
+                <button type="submit" class="btn-submit-form"><i class="fas fa-check"></i> Finalizar Pedido</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+
+<div class="login-overlay" id="loginOverlay">
+    <div class="login-box">
+        <h2>🔐 Acesso Administrativo</h2>
+        <p>Digite a senha para gerenciar os produtos.</p>
+        <input type="password" id="adminPassword" placeholder="Digite a senha..." autocomplete="current-password">
+        <button class="login-btn" id="loginBtn"><i class="fas fa-unlock"></i> Entrar</button>
+        <div class="login-error" id="loginError">❌ Senha incorreta! Tente novamente.</div>
+        <div class="login-hint">🔑 Dica: A senha é "admin123"</div>
+    </div>
+</div>
+
+
+<div class="container" style="margin-top: 30px;">
+
+    
+    <div class="admin-panel" id="adminPanel">
+        <div class="section-header">
+            <i class="fas fa-edit" style="margin-right: 10px; color: #c0392b;"></i> Painel Administrativo
+        </div>
+        <form class="admin-form" id="adminForm">
+            <div class="full-width">
+                <label for="adminProductType">Tipo de produto</label>
+                <select id="adminProductType">
+                    <option value="bolo">Bolo</option>
+                    <option value="salgado">Salgado (cento)</option>
+                </select>
+            </div>
+            <div>
+                <label for="adminProductName">Nome do produto</label>
+                <input type="text" id="adminProductName" placeholder="Ex: Bolo de Chocolate" required>
+            </div>
+            <div>
+                <label for="adminProductPrice">Preço (R$)</label>
+                <input type="number" step="0.01" id="adminProductPrice" placeholder="42.90" required>
+            </div>
+            <div class="full-width">
+                <label for="adminProductDesc">Descrição</label>
+                <textarea id="adminProductDesc" placeholder="Descreva o produto..." required></textarea>
+            </div>
+            <div class="full-width">
+                <label for="adminProductImage">URL da imagem</label>
+                <input type="url" id="adminProductImage" placeholder="https://link-da-sua-imagem.jpg" required>
+                <small style="color: #999;">Cole o link da imagem (iimg.live, Imgur, Google Drive, etc.)</small>
+            </div>
+            <input type="hidden" id="adminEditId" value="">
+            <button type="submit" class="admin-submit"><i class="fas fa-save"></i> Salvar produto</button>
+        </form>
+
+        <div class="admin-products-list">
+            <h3>Produtos cadastrados</h3>
+            <div id="adminProductList"></div>
+        </div>
+    </div>
+
+    
+    <div id="bolos" class="tab-content active">
+        <div class="section-header">
+            <i class="fas fa-cake" style="margin-right: 10px; color: #c0392b;"></i> Nossos Bolos
+        </div>
+        <div class="catalog" id="bolosCatalog"></div>
+    </div>
+
+    
+    <div id="salgados" class="tab-content">
+        <div class="section-header">
+            <i class="fas fa-utensils" style="margin-right: 10px; color: #c0392b;"></i> Salgados (cento)
+        </div>
+        <div class="salgado-info">
+            <p><i class="fas fa-tag"></i> Salgados por cento (100 unidades)</p>
+            <p><strong>R$ 65,00</strong> <span style="font-size: 0.9rem; font-weight:400; margin-left:8px;">(cento)</span></p>
+        </div>
+        <div class="catalog" id="salgadosCatalog"></div>
+    </div>
+
+</div>
+
+
+<div class="cart-overlay" id="cartOverlay">
+    <div class="cart-sidebar">
+        <div class="cart-header">
+            <h2><i class="fas fa-shopping-bag"></i> Carrinho</h2>
+            <button class="close-cart" id="cartCloseBtn">&times;</button>
+        </div>
+        <div class="cart-items" id="cartItemsContainer">
+            <div class="empty-cart">Seu carrinho está vazio.</div>
+        </div>
+        <div class="cart-total">
+            <span>Total</span>
+            <span id="cartTotalPrice">R$ 0,00</span>
+        </div>
+        <button class="checkout-btn" id="checkoutBtn"><i class="fas fa-credit-card"></i> Finalizar compra</button>
+    </div>
+</div>
+
+
+<footer class="section">
+    <div class="container">
+        <div class="row">
+            <div class="col-4">
+                <a href="#" class="logo"><i class="fas fa-cake"></i> Bolos <span style="color: #cf13a6;">Daniel</span></a>
+                <p style="margin-top: 20px; color: #999;">Os melhores bolos e salgados da região. Feitos com amor e ingredientes selecionados.</p>
+                <div class="social-list">
+                    <a href="https://www.facebook.com/pooxah.dency" target="_blank" class="social-item"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.instagram.com/daniel_costaofc/" target="_blank" class="social-item"><i class="fab fa-instagram"></i></a>
+                    <a href="https://wa.me/557998000596" target="_blank" class="social-item"><i class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
+            <div class="col-4" style="text-align: center;">
+                <h3 style="color: #c0392b; margin-bottom: 15px;">Links Rápidos</h3>
+                <ul class="footer-menu">
+                    <li><a href="#" data-tab="bolos">Bolos</a></li>
+                    <li><a href="#" data-tab="salgados">Salgados</a></li>
+                    <li><a href="#" id="footerAdminBtn">Administração</a></li>
+                </ul>
+            </div>
+            <div class="col-4" style="text-align: right;">
+                <h3 style="color: #c0392b; margin-bottom: 15px;">Contato</h3>
+                <p><i class="fas fa-phone"></i> (79) 9800-0596</p>
+                <p><i class="fas fa-envelope"></i> bolosdaniel@gmail.com</p>
+                <p><i class="fas fa-map-marker-alt"></i> Rua das Delícias, 123</p>
+            </div>
+        </div>
+    </div>
+</footer>
+<div class="copyright">
+    <p>&copy; 2026 Bolos do Daniel - Todos os direitos reservados</p>
+</div>
+
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+<script src="script.js"></script>
+
+<script>
+    $(document).ready(function() {
+        $('.hero-carousel').owlCarousel({
+            loop: true,
+            margin: 0,
+            nav: true,
+            navText: [
+                "<i class='bx bx-chevron-left'></i>",
+                "<i class='bx bx-chevron-right'></i>"
+            ],
+            dots: true,
+            autoplay: true,
+            autoplayTimeout: 5000,
+            autoplayHoverPause: true,
+            responsive: {
+                0: { items: 1 },
+                600: { items: 1 },
+                1000: { items: 1 }
+            }
+        });
+    });
+
+    function addToCartById(id) {
+        const allProducts = [...bolos, ...salgados];
+        const product = allProducts.find(p => p.id === id);
+        if (product) {
+            addToCart(product);
+        }
+    }
+</script>
+
+</body>
+</html>
